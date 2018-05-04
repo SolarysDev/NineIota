@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Discord.Net" Version="2.0.0-beta"/>
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2"/>
+    <PackageReference Include="System.Data.SQLite" Version="1.0.108"/>
+    <PackageReference Include="malapi-wrapper" Version="2.1.0"/>
+    <PackageReference Include="Fortnite.Net" Version="1.1.0"/>
+    <PackageReference Include="DiscordBotsList.Api" Version="1.1.0"/>
+    <PackageReference Include="GiphyDotNet" Version="1.0.0"/>
+    <PackageReference Include="RedditSharp" Version="2.0.0-ci00063"/>
+  </ItemGroup>
+</Project>
