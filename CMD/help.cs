@@ -33,6 +33,7 @@ namespace ZeroTwo.Commands
                                                 "\n`template` - A useless meme command that I left in for the memes. Get bases to make memes out of, I guess." +
                                                 "\n`giphy` - Search the massive stores of Giphy's ~~normie~~ vault." +
                                                 "\n`neko` - ***mmmmmmm*** (NSFW)" +
+                                                "\n`work` - Generates a good copypasta from Discord Bot List" +
                                                 "\n------------------");
         }
 
@@ -56,6 +57,8 @@ namespace ZeroTwo.Commands
                                                 "\n`prune` - Mass-deletes the specified amount of messages. Requires (both) Manage Messages." +
                                                 "\n`lock` - Denies \"Send Messages\" to `@everyone`. Requires (both) Manage Channels" +
                                                 "\n`unlock` - Reverses the above. Also requires (both) Manage Channels." +
+                                                "\n`star` - Enables Starboard for your server, in the channel you used the command in. Requires (both) Manage Channels" +
+                                                "\n Disabled Starboard for your server, and deletes the channel used for Starboard. Requires (both) Manage Channels." +
                                                 "\n------------------");
         }
     }
