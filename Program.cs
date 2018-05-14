@@ -31,18 +31,23 @@ namespace ZeroTwo
             _client.ReactionAdded += async (m, Channel, Reaction) => {
                 if(Reaction.Emote.Name != "⭐") return;
                 
-                var Message = await m.GetOrDownloadAsync();
-                if(Message.Author.IsBot) return;
+                var message = await m.GetOrDownloadAsync();
+                if(message.Author.IsBot) return;
+                var star = message.Reactions.Single(s => s.Key.Equals(new Emoji("⭐"))).Value;
+                if (star.ReactionCount > 1) return;
 
-                if(Message.Channel is IGuildChannel c)
+                if(message.Channel is IGuildChannel c)
                 {
                     if(!Starboard.GuildDir.Exists(s => s.GuildID == c.GuildId)) return;
                     var targetID = Starboard.GuildDir.Single(s => s.GuildID == c.GuildId).ChannelID;
+                    
                     var target = await c.Guild.GetTextChannelAsync(targetID);
+                    
                     var embed = new EmbedBuilder()
+                        .WithAuthor(new EmbedAuthorBuilder().WithIconUrl("https://discordemoji.com/assets/emoji/sparkles_indigo.png").WithName("star!"))
                         .WithColor(new Color(255, 0, 0))
-                        .WithTitle($"From {Message.Author.Username}")
-                        .WithDescription(Message.Content)
+                        .WithTitle($"From {message.Author.Username}")
+                        .WithDescription(message.Content)
                         .Build();
                     await target.SendMessageAsync("", false, embed);
                 }

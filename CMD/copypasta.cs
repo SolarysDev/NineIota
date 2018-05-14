@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using Discord;
 using Discord.Commands;
 
-namespace ZeroTwo.Commands
+namespace ZeroTwo.CMD
 {
     public class CopyPasta : ModuleBase<SocketCommandContext>
     {
