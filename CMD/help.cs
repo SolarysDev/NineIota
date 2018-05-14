@@ -58,7 +58,7 @@ namespace ZeroTwo.Commands
                                                 "\n`lock` - Denies \"Send Messages\" to `@everyone`. Requires (both) Manage Channels" +
                                                 "\n`unlock` - Reverses the above. Also requires (both) Manage Channels." +
                                                 "\n`star` - Enables Starboard for your server, in the channel you used the command in. Requires (both) Manage Channels" +
-                                                "\n Disabled Starboard for your server, and deletes the channel used for Starboard. Requires (both) Manage Channels." +
+                                                "\n`unstar` - Disables Starboard for your server, and deletes the channel used for Starboard. Requires (both) Manage Channels." +
                                                 "\n------------------");
         }
     }
