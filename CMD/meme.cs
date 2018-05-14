@@ -56,7 +56,8 @@ namespace ZeroTwo.CMD
         {
             var embed = new EmbedBuilder()
                 .WithTitle("this picture is approved!")
-                .WithImageUrl("https://gyazo.com/c552bb144e7a28f0ffc78a58d9e3a43a");
+                .WithColor(new Color(255, 0, 0))
+                .WithImageUrl("https://did-you-know-that-the-last.letters-of-the-alphabet-are.xyz/lKIdrkPW.png");
             await ReplyAsync("", false, embed.Build());
 
         }
