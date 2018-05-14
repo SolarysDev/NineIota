@@ -1,4 +1,5 @@
 using System;
+using System.Globalization;
 using System.Threading.Tasks;
 using System.Net;
 using Newtonsoft.Json;
@@ -48,6 +49,16 @@ namespace ZeroTwo.CMD
                 .WithColor(new Color(255, 0, 0))
                 .WithImageUrl(gif.Data.ImageUrl);
             await ReplyAsync("", false, embed.Build());
+        }
+
+        [Command("prince")]
+        public async Task PrinceMeme()
+        {
+            var embed = new EmbedBuilder()
+                .WithTitle("this picture is approved!")
+                .WithImageUrl("https://gyazo.com/c552bb144e7a28f0ffc78a58d9e3a43a");
+            await ReplyAsync("", false, embed.Build());
+
         }
     }
 }

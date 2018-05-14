@@ -34,6 +34,7 @@ namespace ZeroTwo.Commands
                                                 "\n`giphy` - Search the massive stores of Giphy's ~~normie~~ vault." +
                                                 "\n`neko` - ***mmmmmmm*** (NSFW)" +
                                                 "\n`work` - Generates a good copypasta from Discord Bot List" +
+                                                "\n`prince` - I approve of this picture!" +
                                                 "\n------------------");
         }
 

@@ -5,7 +5,6 @@ using System.Linq;
 using System.IO;
 using Newtonsoft.Json;
 using Discord;
-using Discord.WebSocket;
 using Discord.Commands; 
 
 namespace ZeroTwo

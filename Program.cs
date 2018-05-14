@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Threading.Tasks;
-using System.Timers;
 using System.Linq;
 using Discord;
 using Discord.WebSocket;
@@ -10,14 +9,14 @@ namespace ZeroTwo
 {
     class Program
     {
-        DiscordSocketClient _client;
-        Handler _handler;
+        private DiscordSocketClient _client;
+        private Handler _handler;
 
-        static void Main(string[] args) => new Program().MainAsync().GetAwaiter().GetResult();
+        private static void Main(string[] args) => new Program().MainAsync().GetAwaiter().GetResult();
 
-        public async Task MainAsync()
+        private async Task MainAsync()
         {
-            if(Config.bot.token == null || Config.bot.token == "") return;
+            if(string.IsNullOrEmpty(Config.bot.token)) return;
 
             _client = new DiscordSocketClient(new DiscordSocketConfig
             {
@@ -80,7 +79,7 @@ namespace ZeroTwo
             return Task.CompletedTask;
         }
 
-        public async Task Ready()
+        private async Task Ready()
         {
             await _client.SetGameAsync("with my darling", null, ActivityType.Playing);
             var DBLClient = new AuthDiscordBotListApi(424445724348907520, Config.bot.DBLKey);

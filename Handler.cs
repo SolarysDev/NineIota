@@ -9,8 +9,8 @@ namespace ZeroTwo
 {
     public class Handler
     {
-        DiscordSocketClient _client;
-        CommandService _service;
+        private DiscordSocketClient _client;
+        private CommandService _service;
 
         public async Task InitAsync(DiscordSocketClient client)
         {
@@ -31,7 +31,7 @@ namespace ZeroTwo
                 var result = await _service.ExecuteAsync(context, argPos);
                 if(!result.IsSuccess && result.Error != CommandError.UnknownCommand)
                 {
-                    Console.WriteLine(result.ErrorReason);
+                    Console.WriteLine($"{msg.Content.Split(' ')[0]}: {result.ErrorReason}");
                 }
             }
         }
