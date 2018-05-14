@@ -37,7 +37,7 @@ namespace ZeroTwo.CMD
                 .AddField("Server Count", Context.Client.Guilds.Count)
                 .AddField("Framework and Language", "Discord.NET, with .NET Core and C#")
                 .AddField("Support Server Link", "https://discord.gg/sJMCW8n", true)
-                .AddField("Repository Link", "not yet!", true)
+                .AddField("Repository Link", "https://github.com/SolarysDev/NineIota", true)
                 .WithFooter("wheee!");
             
             await ReplyAsync("", false, embed.Build());
