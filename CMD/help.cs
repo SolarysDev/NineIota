@@ -35,6 +35,7 @@ namespace ZeroTwo.Commands
                                                 "\n`neko` - ***mmmmmmm*** (NSFW)" +
                                                 "\n`work` - Generates a good copypasta from Discord Bot List" +
                                                 "\n`prince` - I approve of this picture!" +
+                                                "\n`asktrump` - What does Trump think?" +
                                                 "\n------------------");
         }
 
