@@ -42,7 +42,6 @@ namespace ZeroTwo
     {
         public ulong GuildID {get; set;}
         public ulong ChannelID {get; set;}
-        public List<ulong> StarredMessages {get; set;}
     }
 
     public class StarboardFrontEnd : ModuleBase<SocketCommandContext>

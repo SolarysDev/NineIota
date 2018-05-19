@@ -61,5 +61,26 @@ namespace ZeroTwo.CMD
             await ReplyAsync("", false, embed.Build());
 
         }
+
+        [Command("asktrump")]
+        public async Task AskTrump()
+        {
+            string json;
+            using (var client = new WebClient())
+            {
+                json = await client.DownloadStringTaskAsync("https://api.whatdoestrumpthink.com/api/v1/quotes");
+            }
+
+            var responses = JsonConvert.DeserializeObject<dynamic>(json).messages.personalized;
+            var r = new Random();
+
+            var embed = new EmbedBuilder()
+                .WithColor(new Color(255, 0, 0))
+                .WithTitle("What does Trump Think?")
+                .WithDescription($"{Context.User.Mention} {responses[r.Next(0, 572)].ToString()}")
+                .WithImageUrl("http://coldfrontmag.com/wp-content/uploads/2016/11/Angry-Trump.jpg")
+                .Build();
+            await ReplyAsync("", false, embed);
+        }
     }
 }
