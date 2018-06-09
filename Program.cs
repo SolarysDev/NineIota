@@ -81,7 +81,7 @@ namespace ZeroTwo
 
         private async Task Ready()
         {
-            await _client.SetGameAsync("with my darling", null, ActivityType.Playing);
+            await _client.SetGameAsync("with my darling | >>", null, ActivityType.Playing);
             var DBLClient = new AuthDiscordBotListApi(424445724348907520, Config.bot.DBLKey);
             await DBLClient.UpdateStats(_client.Guilds.Count);
             var PushTimer = Task.Run(async () => {
