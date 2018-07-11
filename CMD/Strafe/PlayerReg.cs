@@ -18,7 +18,6 @@ namespace ZeroTwo.CMD.Strafe
 
             var embed = new EmbedBuilder()
                 .WithColor(new Color(255, 0, 0))
-                .WithThumbnailUrl("noot")
                 .WithTitle("Ready!")
                 .WithDescription(
                     "You now have the competitor role! Make sure to [register for the tournament](https://docs.google.com/forms/d/e/1FAIpQLSf7GDM3r8lJMG-upTWBk5_2TsXTMsrhmWCNG8dRMdfAVT4K-Q/viewform)")
